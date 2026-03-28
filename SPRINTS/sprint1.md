@@ -1,7 +1,11 @@
-# 📌 Sprint 1 – HabitShare
+# 📌 Sprint 1 – EuLevo
 
 ## 🧩 Sobre o projeto
-O **HabitShare** é um aplicativo de rastreamento de hábitos com integração social, permitindo que usuários registrem suas atividades diárias e compartilhem seu progresso com outras pessoas, promovendo motivação e consistência.
+O **EuLevo** é um aplicativo de lista de compras voltado para a organização de confraternizações, com o objetivo de ajudar usuários a planejarem eventos, evitando esquecimentos e facilitando a organização dos itens necessários.
+
+O sistema permitirá criar, editar e excluir listas específicas para eventos, adicionar itens e convidar outros usuários para colaborar. Os participantes poderão incluir, editar e remover itens, além de indicar quais produtos irão levar, permitindo o acompanhamento do que será levado e por quem.
+
+O sistema terá integração com um bate-papo, permitindo que os usuários se comuniquem dentro das listas.
 
 ---
 
@@ -12,11 +16,11 @@ Realizar a **elicitação de requisitos**, buscando compreender o problema, o co
 
 ## 👥 Equipe
 
-- **Product Owner (PO):** Nelio  
+- **Product Owner (PO):** Cintia
 - **Scrum Master:** Bruno  
 - **Desenvolvedores:**
   - Ana Clarice  
-  - Cintia  
+  - Nelio 
   - Carlos  
 
 ---
@@ -42,9 +46,9 @@ Realizar a **elicitação de requisitos**, buscando compreender o problema, o co
 A elicitação foi realizada através de:
 
 - Conversas diretas com o Product Owner  
-- Levantamento de ideias e expectativas  
-- Identificação do problema principal  
-- Compreensão do público-alvo  
+- Levantamento de ideias e expectativas sobre o aplicativo  
+- Identificação do problema principal (esquecimento de itens e falta de organização)  
+- Compreensão do público-alvo (usuários que organizam confraternizações e eventos)  
 
 ---
 
@@ -58,5 +62,5 @@ A elicitação foi realizada através de:
 
 ## 📝 Considerações finais
 
-A Sprint 1 teve como foco a compreensão inicial do projeto HabitShare.  
+A Sprint 1 teve como foco a compreensão inicial do projeto **EuLevo**.  
 As informações obtidas servirão como base para o levantamento e detalhamento dos requisitos nas próximas etapas do desenvolvimento.
