@@ -8,6 +8,8 @@ O sistema permitirá criar, editar e excluir listas específicas para eventos, a
 O sistema terá integração com um bate-papo, permitindo que os usuários se comuniquem dentro das listas.
 
 ---
+## Foto da sprint
+![Imagem do projeto](https://drive.google.com/uc?export=view&id=1NjR4QXAgKulrg4JhHFjawH-YG64AC0Jy)
 
 ## 🎯 Objetivo da Sprint
 Realizar a **elicitação de requisitos**, buscando compreender o problema, o contexto do sistema e as necessidades iniciais do projeto junto ao Product Owner.
