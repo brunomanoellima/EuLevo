@@ -66,6 +66,7 @@ A elicitação foi realizada através de:
 
 A Sprint 1 teve como foco a compreensão inicial do projeto **EuLevo**.  
 As informações obtidas servirão como base para o levantamento e detalhamento dos requisitos nas próximas etapas do desenvolvimento.
+
 ---
 
 # 📌 Sprint 2 – EuLevo
