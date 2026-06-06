@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "EuLevo",
+    "slug": "eulevo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#F4F6F5"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.eulevo.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.eulevo.app"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
