@@ -2,24 +2,37 @@
   "expo": {
     "name": "EuLevo",
     "slug": "eulevo",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
+
+    "icon": "./assets/images/logo-eulevo.png",
+
     "splash": {
+      "image": "./assets/images/logo-eulevo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#F4F6F5"
+      "backgroundColor": "#FEFEFF"
     },
+
     "assetBundlePatterns": [
       "**/*"
     ],
+
     "android": {
-      "package": "com.eulevo.app"
+      "package": "com.eulevo.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo-eulevo.png",
+        "backgroundColor": "#FEFEFF"
+      }
     },
+
     "ios": {
       "bundleIdentifier": "com.eulevo.app"
     },
+
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "favicon": "./assets/images/logo-eulevo.png"
     }
   }
 }
