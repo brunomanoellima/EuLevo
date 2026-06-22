@@ -1,43 +1,69 @@
-# EuLevo
+<div align="center">
 
-Aplicativo mobile desenvolvido em `React Native + Expo`, com backend local em `Express + SQLite`.
+# 📦 EuLevo
 
-O **EuLevo** é um aplicativo para organização colaborativa de eventos, permitindo criar grupos, convidar participantes, adicionar itens, assumir responsabilidades, conversar pelo chat e acompanhar notificações e histórico de alterações.
+### Organize eventos. Divida responsabilidades. Faça tudo acontecer.
+
+Aplicativo mobile colaborativo para organização de eventos, listas de itens, participantes, convites, chat, notificações e histórico de atividades.
+
+[![React Native](https://img.shields.io/badge/React%20Native-Mobile-61DAFB?logo=react\&logoColor=white)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-Development%20Platform-000020?logo=expo\&logoColor=white)](https://expo.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js\&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-API-000000?logo=express\&logoColor=white)](https://expressjs.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite\&logoColor=white)](https://sqlite.org/)
+[![Version](https://img.shields.io/badge/Version-1.1.0-blue)]()
+[![Status](https://img.shields.io/badge/Status-Functional%20Locally-success)]()
+
+</div>
 
 ---
 
-## Versão atual
+## 📖 Sobre o projeto
 
-```text
-1.1.0
-```
+O **EuLevo** é um aplicativo mobile criado para facilitar a organização colaborativa de eventos, como confraternizações, aniversários, churrascos, reuniões, encontros acadêmicos e eventos familiares.
+
+Por meio do aplicativo, os usuários podem criar eventos, convidar participantes, adicionar itens necessários, assumir responsabilidades, conversar em um chat exclusivo do grupo e acompanhar notificações e histórico de alterações.
+
+O projeto utiliza uma arquitetura cliente-servidor: o aplicativo mobile consome uma API REST responsável pela autenticação, regras de negócio e persistência dos dados.
 
 ---
 
-## Principais melhorias da versão 1.1.0
+## ✨ Funcionalidades
 
-* Correção do sistema de convites.
-* Convites agora aparecem como pendentes para o administrador.
-* Participante convidado pode aceitar ou recusar convite.
-* Correção da atualização do chat.
-* Chat atualiza automaticamente.
-* Correção da criação e atualização de itens em tempo quase real.
+| Área             | Funcionalidades                                                               |
+| ---------------- | ----------------------------------------------------------------------------- |
+| 🔐 Autenticação  | Cadastro, login, logout, recuperação de senha simplificada e proteção com JWT |
+| 👤 Perfil        | Visualização e edição do nome do usuário                                      |
+| 📅 Eventos       | Criação, visualização e exclusão de eventos pelo criador                      |
+| 👥 Participantes | Busca de usuários, envio de convites, aceite e recusa de convites             |
+| 📦 Itens         | Criação, edição, exclusão, assumir item e desmarcar responsabilidade          |
+| 💬 Chat          | Conversas exclusivas para participantes do evento                             |
+| 🔔 Notificações  | Avisos sobre alterações importantes em eventos e itens                        |
+| 🕓 Histórico     | Registro de ações como criação, edição, exclusão e atualização de itens       |
+
+---
+
+## 🚀 Destaques da versão 1.1.0
+
+* Nova identidade visual com paleta azul e branca.
+* Tela de login redesenhada com logo do EuLevo.
+* Edição de perfil corrigida, permitindo alterar o nome do usuário.
+* Sistema de convites atualizado.
+* Convites pendentes visíveis para o organizador.
+* Participantes podem aceitar ou recusar convites.
+* Busca direta de usuários cadastrados na tela de participantes.
+* Chat com atualização automática.
+* Atualização de itens para os participantes.
 * Qualquer participante pode adicionar itens.
-* Administrador pode excluir qualquer item.
-* Participante pode excluir apenas itens criados por ele.
-* Correção da exclusão de eventos para participantes.
-* Correção da edição de perfil.
-* Usuário pode alterar o nome do perfil.
-* Nova interface visual com paleta azul e branca.
-* Nova tela de login com logo do EuLevo.
-* Ajustes na tela inicial, cards de eventos e botão “Ver grupo”.
-* Tela de participantes com busca direta por usuários cadastrados.
-* Alertas substituídos por modais com identidade visual do aplicativo.
-* Logo adicionada ao projeto.
+* Organizador pode excluir qualquer item.
+* Participante pode excluir apenas os itens criados por ele.
+* Eventos excluídos pelo organizador deixam de aparecer para os participantes.
+* Alertas substituídos por modais visuais personalizados.
+* Tela inicial reformulada com cards de eventos e botão **“Ver grupo”**.
 
 ---
 
-## Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 
 ### Aplicativo mobile
 
@@ -54,143 +80,26 @@ O **EuLevo** é um aplicativo para organização colaborativa de eventos, permit
 * Express
 * SQLite
 * JWT
-* Swagger
 * bcryptjs
+* Swagger
 
 ---
 
-## Rodando o app
+## 🏗️ Arquitetura do sistema
 
-Pela pasta raiz do projeto:
-
-```bash
-npm install
-copy .env.example .env
-npx expo start --lan --clear
-```
-
-Depois escaneie o QR Code no aplicativo **Expo Go**.
-
-Antes de abrir o app no celular, edite o arquivo `.env` na raiz do projeto e coloque o IP da sua máquina:
-
-```text
-EXPO_PUBLIC_API_URL=http://SEU_IP_NA_REDE:3333
-```
-
-Exemplo:
-
-```text
-EXPO_PUBLIC_API_URL=http://192.168.0.10:3333
-```
-
-> Importante: no celular, não use `localhost`, pois o `localhost` aponta para o próprio celular. Use o IP do computador na rede local.
-
----
-
-## Rodando o backend
-
-Pela pasta do backend:
-
-```bash
-cd backend
-npm install
-copy .env.example .env
-npm start
-```
-
-Ou pela raiz do projeto:
-
-```bash
-npm run backend
-```
-
-O backend sobe em:
-
-```text
-http://localhost:3333
-```
-
-Swagger:
-
-```text
-http://localhost:3333/docs
-```
-
-Health check:
-
-```text
-http://localhost:3333/health
+```mermaid
+flowchart LR
+    A["📱 Aplicativo Mobile<br/>React Native + Expo"] -->|"HTTP + JSON"| B["🌐 API REST<br/>Node.js + Express"]
+    B --> C["Controllers"]
+    C --> D["Services<br/>Regras de Negócio"]
+    D --> E["🗄️ SQLite<br/>Banco de Dados"]
 ```
 
 ---
 
-## Banco de dados
+## 📂 Estrutura do projeto
 
-O projeto usa SQLite com banco persistente em:
-
-```text
-backend/data/eulevo.db
-```
-
-Para resetar o banco e recriar os dados iniciais, apague o arquivo:
-
-```text
-backend/data/eulevo.db
-```
-
-Depois inicie o backend novamente.
-
----
-
-## Funcionalidades atuais
-
-* Cadastro de usuário.
-* Login com autenticação.
-* Recuperação de senha.
-* Listagem de eventos do usuário.
-* Criação de eventos.
-* Exclusão de eventos pelo criador.
-* Visualização de detalhes do evento.
-* Listagem de participantes.
-* Convite de participantes por e-mail cadastrado.
-* Indicação de convite pendente.
-* Aceitar convite.
-* Recusar convite.
-* Proteção contra participante duplicado.
-* Adição de itens por qualquer participante.
-* Exclusão de itens com regra de permissão.
-* Administrador exclui qualquer item.
-* Participante exclui somente itens criados por ele.
-* Regra de apenas um responsável por item.
-* Assumir item.
-* Desmarcar item.
-* Chat por evento restrito aos participantes.
-* Atualização automática do chat.
-* Notificações agrupadas por evento.
-* Histórico de criação, atualização e exclusão de itens.
-* Edição de perfil com alteração de nome.
-* Interface personalizada com identidade visual do EuLevo.
-
----
-
-## Regras de negócio implementadas
-
-* Apenas usuários autenticados acessam o app.
-* Apenas o criador do evento pode excluir o evento.
-* Apenas o organizador pode convidar participantes.
-* O usuário convidado precisa estar cadastrado no app.
-* Um usuário não pode ser convidado duas vezes para o mesmo evento com convite pendente.
-* Um usuário que já participa do evento não pode ser convidado novamente.
-* Apenas participantes podem acessar detalhes, itens e chat do evento.
-* Cada item pode ter apenas um responsável.
-* O responsável ou o organizador pode desmarcar um item.
-* O administrador pode excluir qualquer item.
-* O participante pode excluir apenas os itens que criou.
-* O usuário só pode editar o próprio perfil.
-
----
-
-## Estrutura do projeto
+### Frontend
 
 ```text
 src/
@@ -210,9 +119,7 @@ src/
     `-- screens/
 ```
 
----
-
-## Estrutura do backend
+### Backend
 
 ```text
 backend/
@@ -234,64 +141,186 @@ backend/
 
 ---
 
-## Endpoints principais
+## ⚙️ Como executar o projeto
 
-### Saúde da API
+### Pré-requisitos
 
-* `GET /health`
+Antes de iniciar, tenha instalado:
+
+* Node.js
+* npm
+* Expo Go no celular
+* Computador e celular conectados à mesma rede Wi-Fi
+
+---
+
+### 1. Executar o backend
+
+Abra um terminal na pasta do backend:
+
+```bash
+cd backend
+npm install
+copy .env.example .env
+npm start
+```
+
+Também é possível iniciar o backend pela raiz do projeto:
+
+```bash
+npm run backend
+```
+
+O backend será iniciado em:
+
+```text
+http://localhost:3333
+```
+
+| Recurso      | Endereço                       |
+| ------------ | ------------------------------ |
+| API          | `http://localhost:3333`        |
+| Swagger      | `http://localhost:3333/docs`   |
+| Health Check | `http://localhost:3333/health` |
+
+---
+
+### 2. Configurar o aplicativo mobile
+
+Na raiz do projeto, crie o arquivo `.env`:
+
+```bash
+copy .env.example .env
+```
+
+Edite o arquivo `.env` e informe o IP da sua máquina na rede local:
+
+```text
+EXPO_PUBLIC_API_URL=http://SEU_IP_NA_REDE:3333
+```
+
+Exemplo:
+
+```text
+EXPO_PUBLIC_API_URL=http://192.168.0.10:3333
+```
+
+> ⚠️ Não utilize `localhost` no celular. O `localhost` aponta para o próprio celular, não para o computador onde o backend está rodando.
+
+---
+
+### 3. Executar o aplicativo
+
+Na raiz do projeto:
+
+```bash
+npm install
+npx expo start --lan --clear
+```
+
+Depois, escaneie o QR Code pelo aplicativo **Expo Go**.
+
+---
+
+## 🗄️ Banco de dados
+
+O projeto utiliza o SQLite como banco de dados local e persistente.
+
+```text
+backend/data/eulevo.db
+```
+
+### Reiniciar o banco
+
+Para apagar os dados e recriar a base inicial:
+
+1. Apague o arquivo abaixo:
+
+```text
+backend/data/eulevo.db
+```
+
+2. Inicie o backend novamente.
+
+---
+
+## 🔐 Regras de negócio
+
+* Apenas usuários autenticados podem acessar as áreas protegidas.
+* Apenas o criador do evento pode excluí-lo.
+* Apenas o organizador pode convidar participantes.
+* O participante convidado deve possuir cadastro no aplicativo.
+* Um usuário não pode receber convites duplicados para o mesmo evento.
+* Um usuário já participante não pode ser convidado novamente.
+* Apenas participantes podem acessar itens, participantes e chat do evento.
+* Cada item pode possuir somente um responsável por vez.
+* O responsável pelo item ou o organizador pode desmarcá-lo.
+* O organizador pode excluir qualquer item da lista.
+* Participantes podem excluir somente os itens criados por eles.
+* O usuário pode editar apenas o próprio perfil.
+
+---
+
+## 🌐 Endpoints principais
 
 ### Autenticação
 
-* `POST /auth/login`
-* `POST /auth/register`
-* `POST /auth/recover-password`
+| Método | Endpoint                 | Descrição                         |
+| ------ | ------------------------ | --------------------------------- |
+| `POST` | `/auth/login`            | Realiza login                     |
+| `POST` | `/auth/register`         | Cadastra usuário                  |
+| `POST` | `/auth/recover-password` | Recuperação de senha simplificada |
 
 ### Usuários
 
-* `GET /users`
-* `GET /users/:userId`
-* `PATCH /users/:userId`
+| Método  | Endpoint         | Descrição                  |
+| ------- | ---------------- | -------------------------- |
+| `GET`   | `/users`         | Lista usuários cadastrados |
+| `GET`   | `/users/:userId` | Busca usuário por ID       |
+| `PATCH` | `/users/:userId` | Atualiza nome do usuário   |
 
 ### Eventos
 
-* `GET /events?userId=:userId`
-* `POST /events`
-* `GET /events/:eventId`
-* `DELETE /events/:eventId`
+| Método   | Endpoint                 | Descrição                |
+| -------- | ------------------------ | ------------------------ |
+| `GET`    | `/events?userId=:userId` | Lista eventos do usuário |
+| `POST`   | `/events`                | Cria evento              |
+| `GET`    | `/events/:eventId`       | Busca evento             |
+| `DELETE` | `/events/:eventId`       | Exclui evento            |
 
 ### Participantes e convites
 
-* `GET /events/:eventId/participants`
-* `POST /events/:eventId/participants`
-* `GET /events/:eventId/invitations`
-* `GET /invitations?userId=:userId`
-* `POST /invitations/:invitationId/accept`
-* `POST /invitations/:invitationId/decline`
+| Método | Endpoint                             | Descrição                 |
+| ------ | ------------------------------------ | ------------------------- |
+| `GET`  | `/events/:eventId/participants`      | Lista participantes       |
+| `POST` | `/events/:eventId/participants`      | Envia convite             |
+| `GET`  | `/events/:eventId/invitations`       | Lista convites do evento  |
+| `GET`  | `/invitations?userId=:userId`        | Lista convites do usuário |
+| `POST` | `/invitations/:invitationId/accept`  | Aceita convite            |
+| `POST` | `/invitations/:invitationId/decline` | Recusa convite            |
 
 ### Itens
 
-* `GET /events/:eventId/items`
-* `POST /events/:eventId/items`
-* `PATCH /events/:eventId/items/:itemId`
-* `DELETE /events/:eventId/items/:itemId`
-* `POST /events/:eventId/items/:itemId/assign`
-* `POST /events/:eventId/items/:itemId/unassign`
+| Método   | Endpoint                                  | Descrição     |
+| -------- | ----------------------------------------- | ------------- |
+| `GET`    | `/events/:eventId/items`                  | Lista itens   |
+| `POST`   | `/events/:eventId/items`                  | Cria item     |
+| `PATCH`  | `/events/:eventId/items/:itemId`          | Atualiza item |
+| `DELETE` | `/events/:eventId/items/:itemId`          | Exclui item   |
+| `POST`   | `/events/:eventId/items/:itemId/assign`   | Assume item   |
+| `POST`   | `/events/:eventId/items/:itemId/unassign` | Desmarca item |
 
-### Chat
+### Chat, notificações e histórico
 
-* `GET /events/:eventId/messages`
-* `POST /events/:eventId/messages`
+| Método | Endpoint                        | Descrição                     |
+| ------ | ------------------------------- | ----------------------------- |
+| `GET`  | `/events/:eventId/messages`     | Lista mensagens               |
+| `POST` | `/events/:eventId/messages`     | Envia mensagem                |
+| `GET`  | `/notifications?userId=:userId` | Lista notificações            |
+| `POST` | `/notifications/read-all`       | Marca notificações como lidas |
+| `GET`  | `/events/:eventId/history`      | Lista histórico do evento     |
 
-### Notificações
-
-* `GET /notifications?userId=:userId`
-* `POST /notifications/read-all`
-
-### Histórico
-
-* `GET /events/:eventId/history`
-
-Todas as rotas, exceto `GET /health`, `POST /auth/login`, `POST /auth/register` e `POST /auth/recover-password`, exigem:
+> Todas as rotas, exceto login, cadastro, recuperação de senha e health check, exigem autenticação JWT.
 
 ```text
 Authorization: Bearer <token>
@@ -299,15 +328,15 @@ Authorization: Bearer <token>
 
 ---
 
-## Exemplos rápidos
+## 🧪 Exemplos de requisições
 
-Health check:
+### Health check
 
 ```bash
 curl http://localhost:3333/health
 ```
 
-Login:
+### Login
 
 ```bash
 curl -X POST http://localhost:3333/auth/login ^
@@ -315,7 +344,7 @@ curl -X POST http://localhost:3333/auth/login ^
   -d "{\"email\":\"eduardo@eulevo.app\",\"password\":\"123456\"}"
 ```
 
-Listar eventos de um usuário com token:
+### Listar eventos
 
 ```bash
 curl "http://localhost:3333/events?userId=u1" ^
@@ -324,45 +353,65 @@ curl "http://localhost:3333/events?userId=u1" ^
 
 ---
 
-## Observação sobre Expo Go
+## 📚 Documentação complementar
 
-Durante o uso no **Expo Go**, pode aparecer uma tela de carregamento com:
+A documentação completa do projeto inclui:
+
+* requisitos funcionais e não funcionais;
+* regras de negócio;
+* casos de uso;
+* diagramas UML;
+* arquitetura MVC;
+* modelagem de dados;
+* documentação da API;
+* análise de riscos;
+* limitações e melhorias futuras.
+
+📄 Consulte o arquivo:
 
 ```text
-Bundling...
-EuLevo
+Documentacao_EuLevo_Atualizada_v1.1.0.md
 ```
 
-Essa tela pertence ao ambiente de desenvolvimento do Expo Go. Na build instalada do aplicativo, a splash screen usa a configuração definida em `app.json`.
-
 ---
 
-## Limitações conhecidas
+## ⚠️ Limitações atuais
 
-* O sistema ainda roda com backend local.
-* A alta disponibilidade ainda não foi implementada.
-* O backup automático ainda não foi implementado.
-* O bloqueio temporário após 5 tentativas de login incorretas ainda precisa ser implementado.
+* O backend funciona apenas em ambiente local.
 * O chat atualiza por intervalo de tempo, não por WebSocket.
 * Push notifications reais ainda não foram integradas.
+* Backup automático ainda não foi implementado.
+* Alta disponibilidade ainda não foi implementada.
+* Bloqueio temporário após cinco tentativas incorretas de login ainda não foi implementado.
+* A recuperação de senha está em versão simplificada.
 
 ---
 
-## Próximos passos
+## 🔮 Próximas melhorias
 
-* Implementar bloqueio temporário após 5 tentativas de login incorretas.
-* Implementar backup automático do banco.
-* Hospedar backend e banco em ambiente online.
-* Substituir atualização por intervalo no chat por WebSocket.
-* Integrar push notifications reais.
-* Melhorar a splash screen e gerar build final do aplicativo.
-* Criar versão de produção com APK/AAB.
+* [ ] Hospedar backend e banco de dados em ambiente online.
+* [ ] Implementar backup automático.
+* [ ] Adicionar bloqueio após tentativas de login incorretas.
+* [ ] Implementar WebSocket para chat em tempo real.
+* [ ] Integrar notificações push.
+* [ ] Criar APK/AAB para distribuição.
+* [ ] Melhorar splash screen da versão de produção.
+* [ ] Migrar o banco de dados para uma solução em nuvem.
 
 ---
 
-## Status do projeto
+## 📌 Status do projeto
 
 ```text
 Versão: 1.1.0
 Status: funcional em ambiente local
+Frontend: React Native + Expo
+Backend: Node.js + Express
+Banco de dados: SQLite
 ```
+
+<div align="center">
+
+Desenvolvido como projeto acadêmico de Sistemas de Informação — UFAM / ICET.
+
+</div>
