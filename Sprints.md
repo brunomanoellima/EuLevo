@@ -401,3 +401,265 @@ Experiência do usuário ao interagir com o sistema.
 
 ## 📝 Considerações finais
 A Sprint 6 permitiu validar a interface e melhorar a experiência do usuário antes da implementação.
+
+# 📌 Sprint 7 – Estrutura Inicial e Arquitetura do Sistema – EuLevo
+
+**Período:** até 21/05
+
+## 🧩 Sobre a Sprint
+
+Nesta sprint, a equipe iniciou a transformação da documentação e dos diagramas em uma estrutura funcional de aplicação. Foi definida a separação entre o aplicativo mobile, o backend e o banco de dados.
+
+O projeto passou a utilizar uma arquitetura cliente-servidor, com o aplicativo desenvolvido em **React Native + Expo** e um backend construído em **Node.js + Express**.
+
+---
+
+## 🎯 Objetivo da Sprint
+
+Criar a base estrutural do sistema, garantindo organização do código, separação de responsabilidades e compatibilidade com os requisitos definidos nas sprints anteriores.
+
+---
+
+## 📋 Atividades realizadas
+
+* Criação da estrutura inicial do aplicativo mobile com React Native e Expo.
+* Criação da estrutura inicial do backend com Node.js e Express.
+* Definição do banco de dados SQLite para persistência local.
+* Organização do backend em rotas, controllers, services e middlewares.
+* Organização do frontend em telas, componentes, navegação, tema e consumo da API.
+* Criação das estruturas iniciais para usuários, eventos, participantes, itens e mensagens.
+* Configuração de variáveis de ambiente para conexão entre o aplicativo e a API.
+* Revisão dos requisitos e diagramas para manter compatibilidade com a implementação.
+
+---
+
+## 🏗️ Arquitetura definida
+
+```text
+Aplicativo Mobile
+React Native + Expo
+        │
+        │ HTTP / JSON
+        ▼
+API REST
+Node.js + Express
+        │
+        ▼
+Camadas internas
+Routes → Controllers → Services → Banco de Dados
+        │
+        ▼
+SQLite
+```
+
+---
+
+## ✅ Critérios atendidos na Sprint
+
+* Compatibilidade com a documentação inicial.
+* Estrutura preparada para API REST.
+* Separação de responsabilidades entre frontend, backend e banco de dados.
+* Base preparada para autenticação e regras de segurança.
+
+---
+
+## 📦 Entregas da Sprint
+
+* Estrutura inicial do aplicativo mobile.
+* Estrutura inicial da API REST.
+* Banco SQLite configurado.
+* Organização inicial das camadas do sistema.
+* Base técnica para as funcionalidades das próximas sprints.
+
+---
+
+## 📝 Considerações finais
+
+A Sprint 7 foi importante para converter a documentação produzida anteriormente em uma base real de desenvolvimento. A separação entre frontend, backend e banco de dados facilitou a organização do projeto e permitiu a evolução das funcionalidades de forma mais segura e estruturada.
+
+---
+
+# 📌 Sprint 8 – API REST, Segurança e Integração – EuLevo
+
+**Período:** até 28/05
+
+## 🧩 Sobre a Sprint
+
+Nesta sprint, a equipe concentrou-se na implementação das funcionalidades centrais do sistema e na integração entre o aplicativo mobile e a API REST.
+
+Também foram aplicadas medidas de segurança para autenticação e proteção das rotas do sistema.
+
+---
+
+## 🎯 Objetivo da Sprint
+
+Implementar a comunicação entre frontend e backend, criar as principais rotas da API e aplicar regras de segurança para usuários autenticados.
+
+---
+
+## 📋 Atividades realizadas
+
+* Implementação do cadastro de usuários.
+* Implementação de login com e-mail e senha.
+* Criação de autenticação baseada em JWT.
+* Proteção das senhas utilizando hash com bcryptjs.
+* Configuração de CORS para comunicação entre o aplicativo e a API.
+* Implementação de rotas para usuários, eventos e participantes.
+* Implementação da criação e listagem de eventos.
+* Implementação do envio de convites para participantes cadastrados.
+* Implementação da listagem de participantes por evento.
+* Implementação inicial de criação, edição e exclusão de itens.
+* Aplicação das regras de permissão para organizadores e participantes.
+* Testes de comunicação entre React Native, Express e SQLite.
+
+---
+
+## 🔐 Segurança aplicada
+
+* Senhas armazenadas com hash bcryptjs.
+* Autenticação por token JWT.
+* Rotas protegidas para usuários autenticados.
+* Validação de campos obrigatórios.
+* Validação de permissões antes de alterar eventos, itens ou perfil.
+* Configuração de CORS para permitir o consumo seguro da API pelo aplicativo.
+
+---
+
+## 🌐 Funcionalidades da API implementadas
+
+```text
+POST   /auth/register
+POST   /auth/login
+POST   /auth/recover-password
+
+GET    /users
+GET    /users/:userId
+PATCH  /users/:userId
+
+GET    /events
+POST   /events
+GET    /events/:eventId
+DELETE /events/:eventId
+
+GET    /events/:eventId/participants
+POST   /events/:eventId/participants
+
+GET    /events/:eventId/items
+POST   /events/:eventId/items
+PATCH  /events/:eventId/items/:itemId
+DELETE /events/:eventId/items/:itemId
+```
+
+---
+
+## ✅ Critérios atendidos na Sprint
+
+* Implementação da API REST.
+* Aplicação de autenticação JWT.
+* Criptografia de senhas com bcryptjs.
+* Configuração de CORS.
+* Separação entre rotas, controllers, services e banco de dados.
+* Integração inicial entre aplicativo mobile e backend.
+
+---
+
+## 📝 Considerações finais
+
+A Sprint 8 consolidou a integração entre as partes principais do sistema. O EuLevo passou a possuir autenticação, persistência de dados, regras de autorização e funcionalidades essenciais para a organização colaborativa de eventos.
+
+---
+
+# 📌 Sprint 9 – Refinamento, Funcionalidades Finais e Validação – EuLevo
+
+**Período:** até 01/06
+
+## 🧩 Sobre a Sprint
+
+Nesta sprint, a equipe realizou correções, melhorias visuais e refinamento das funcionalidades já implementadas. O foco foi garantir que as regras de negócio funcionassem corretamente para organizadores e participantes.
+
+A versão consolidada do projeto passou a ser identificada como **1.1.0**.
+
+---
+
+## 🎯 Objetivo da Sprint
+
+Finalizar as funcionalidades principais do aplicativo, corrigir problemas identificados durante os testes e atualizar a documentação para refletir a versão implementada.
+
+---
+
+## 📋 Atividades realizadas
+
+* Correção do sistema de convites.
+* Exibição de convites pendentes para o organizador.
+* Implementação de aceite e recusa de convites.
+* Proteção contra convites duplicados.
+* Correção da atualização da lista de participantes.
+* Implementação da busca de usuários cadastrados para convite.
+* Correção da criação e atualização de itens.
+* Liberação para que participantes adicionem itens.
+* Regra de exclusão de itens por permissão:
+
+  * organizador pode excluir qualquer item;
+  * participante pode excluir apenas itens criados por ele.
+* Implementação de assumir e desmarcar itens.
+* Implementação do chat por evento.
+* Atualização automática do chat por intervalo de tempo.
+* Implementação de notificações e histórico de ações.
+* Correção da edição de perfil.
+* Atualização do nome do usuário no backend e na interface.
+* Reformulação visual da tela de login.
+* Criação de identidade visual azul e branca.
+* Reformulação da tela inicial com cards de eventos.
+* Adição do botão **“Ver grupo”**.
+* Substituição de alertas simples por modais personalizados.
+* Documentação dos endpoints com Swagger.
+* Atualização da documentação do projeto conforme a versão implementada.
+
+---
+
+## ✅ Regras de negócio validadas
+
+* Apenas o criador do evento pode excluí-lo.
+* Apenas o organizador pode convidar participantes.
+* Um participante não pode receber convites duplicados.
+* Participantes podem adicionar itens ao evento.
+* Cada item possui apenas um responsável por vez.
+* O responsável ou o organizador pode desmarcar um item.
+* O organizador pode excluir qualquer item.
+* O participante pode excluir somente os itens criados por ele.
+* Apenas participantes podem acessar detalhes, itens, chat e histórico do evento.
+* O usuário pode editar apenas o próprio perfil.
+
+---
+
+## ✅ Critérios atendidos na Sprint
+
+* Compatibilidade da implementação com a documentação atualizada.
+* API REST integrada ao aplicativo mobile.
+* Segurança com JWT, bcryptjs e CORS.
+* Separação de responsabilidades entre frontend, backend, controllers, services e banco de dados.
+* Regras de negócio implementadas e validadas.
+* Interface aprimorada para melhor experiência do usuário.
+
+---
+
+## 📦 Entregas da Sprint
+
+* Versão funcional 1.1.0 do EuLevo.
+* Aplicativo mobile em React Native + Expo.
+* Backend REST em Node.js + Express.
+* Banco de dados SQLite persistente.
+* Chat, notificações e histórico.
+* Convites com aceite e recusa.
+* Controle de permissões para eventos e itens.
+* Documentação Swagger da API.
+* Documentação atualizada do projeto.
+
+---
+
+## 📝 Considerações finais
+
+A Sprint 9 marcou a consolidação da versão funcional do EuLevo. O sistema passou a atender aos principais objetivos definidos inicialmente, permitindo a organização colaborativa de eventos por meio de criação de grupos, convites, itens, responsabilidades, chat e acompanhamento de atividades.
+
+A equipe também garantiu que a implementação mantivesse compatibilidade com os requisitos, regras de negócio, arquitetura e documentação do projeto.
+
